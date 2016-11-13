@@ -1,0 +1,44 @@
+/**
+ * Default Variables.
+ *
+ * Modify this file to provide default Bootstrap Framework variables. The
+ * Bootstrap Framework will not override any variables defined here because it
+ * uses the `!default` flag which will only set their default if not already
+ * defined here.
+ *
+ * You can copy existing variables directly from the following file:
+ * ./THEMENAME/bootstrap/assets/stylesheets/_variables.scss
+ */
+
+// Set the proper directory for the Bootstrap Glyphicon font.
+$icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
+
+// Breakpoints.
+
+/* Large desktops and laptops */
+$desk: '(min-width: 1200px)';
+/* Landscape tablets and medium desktops */
+$tablet-landscape: '(min-width: 992px) and (max-width: 1199px)';
+
+/* Portrait tablets and small desktops */
+$tablet-portrait: '(min-width: 768px) and (max-width: 991px)';
+
+/* Landscape phones and portrait tablets */
+$mobile-landscape: '(max-width: 767px)';
+
+/* Portrait phones and smaller */
+$mobile-portrait: '(max-width: 480px)';
+
+// Include font-awesome.
+
+.front_page_wide1 {
+  background-color: #00b3ee;
+}
+.front_page_wide2 {
+  background-color: #0f0f0f;
+  color: #FFF;
+}
+.front_page_wide3 {
+  background-color: #2ca02c;
+}
+
