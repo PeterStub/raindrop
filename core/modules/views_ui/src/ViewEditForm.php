@@ -509,12 +509,7 @@ class ViewEditForm extends ViewFormBase {
     $build['columns']['third'] = array(
       '#type' => 'details',
       '#title' => $this->t('Advanced'),
-      '#theme_wrappers' => array(
-          'details' => array(),
-          'container' => array(
-          '#attributes' => array('class' => 'details-wrapper'),
-          ),
-      ),
+      '#theme_wrappers' => array('details'),
       '#attributes' => array(
         'class' => array(
           'views-display-column',
