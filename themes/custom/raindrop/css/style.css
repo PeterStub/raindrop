@@ -10,25 +10,35 @@
  * You can copy existing variables directly from the following file:
  * ./THEMENAME/bootstrap/assets/stylesheets/_variables.scss
  */
+/* line 1, ../sass/component_raindrop/_defaults.scss */
+body {
+  background-color: #F4F2DB !important;
+}
+
 /* Large desktops and laptops */
 /* Landscape tablets and medium desktops */
 /* Portrait tablets and small desktops */
 /* Landscape phones and portrait tablets */
 /* Portrait phones and smaller */
-/* line 34, ../sass/_default-variables.scss */
+/* line 18, ../sass/_default-variables.scss */
 .front_page_wide1 {
   background-color: #00b3ee;
 }
 
-/* line 37, ../sass/_default-variables.scss */
+/* line 21, ../sass/_default-variables.scss */
 .front_page_wide2 {
   background-color: #0f0f0f;
   color: #FFF;
 }
 
-/* line 41, ../sass/_default-variables.scss */
+/* line 25, ../sass/_default-variables.scss */
 .front_page_wide3 {
   background-color: #2ca02c;
+}
+
+/* line 29, ../sass/_default-variables.scss */
+h1 {
+  color: #DB7D30 !important;
 }
 
 /*!

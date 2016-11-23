@@ -13,23 +13,7 @@
 // Set the proper directory for the Bootstrap Glyphicon font.
 $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
 
-// Breakpoints.
-
-/* Large desktops and laptops */
-$desk: '(min-width: 1200px)';
-/* Landscape tablets and medium desktops */
-$tablet-landscape: '(min-width: 992px) and (max-width: 1199px)';
-
-/* Portrait tablets and small desktops */
-$tablet-portrait: '(min-width: 768px) and (max-width: 991px)';
-
-/* Landscape phones and portrait tablets */
-$mobile-landscape: '(max-width: 767px)';
-
-/* Portrait phones and smaller */
-$mobile-portrait: '(max-width: 480px)';
-
-// Include font-awesome.
+@import "component_raindrop/defaults";
 
 .front_page_wide1 {
   background-color: #00b3ee;
@@ -40,5 +24,9 @@ $mobile-portrait: '(max-width: 480px)';
 }
 .front_page_wide3 {
   background-color: #2ca02c;
+}
+
+h1 {
+  color: $font-color;
 }
 
