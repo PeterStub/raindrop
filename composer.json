@@ -10,9 +10,6 @@
         "drupal/pathauto": "1.x-dev",
         "drupal/bootstrap": "^3.0"
     },
-    "replace": {
-        "drupal/core": "~8.2"
-    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
