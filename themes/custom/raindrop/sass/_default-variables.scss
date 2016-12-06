@@ -12,21 +12,3 @@
 
 // Set the proper directory for the Bootstrap Glyphicon font.
 $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
-
-@import "component_raindrop/defaults";
-
-.front_page_wide1 {
-  background-color: #00b3ee;
-}
-.front_page_wide2 {
-  background-color: #0f0f0f;
-  color: #FFF;
-}
-.front_page_wide3 {
-  background-color: #2ca02c;
-}
-
-h1 {
-  color: $font-color;
-}
-

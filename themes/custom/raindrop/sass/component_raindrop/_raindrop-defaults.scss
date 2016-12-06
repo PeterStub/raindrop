@@ -1,0 +1,77 @@
+// Breakpoints.
+/* Large desktops and laptops */
+$desk: '(min-width: 1200px)';
+
+/* Landscape tablets and medium desktops */
+$tablet-landscape: '(min-width: 992px) and (max-width: 1199px)';
+
+/* Portrait tablets and small desktops */
+$tablet-portrait: '(min-width: 768px) and (max-width: 991px)';
+
+/* Landscape phones and portrait tablets */
+$mobile-landscape: '(min-width: 481px) and (max-width: 767px)';
+
+/* Portrait phones and smaller */
+$mobile-portrait: '(max-width: 480px)';
+
+$font-color: #DB7D30 !important;
+
+$darkgrey: #585858;
+$lightgrey: #c3c3c3;
+
+$txt-size: 1.9rem;
+
+@mixin margin() {
+  margin-bottom: 15px !important;
+  @media #{$mobile-landscape} {
+    margin-bottom: 15px !important;
+  }
+  @media #{$tablet-portrait} {
+    margin-bottom: 20px !important;
+  }
+  @media #{$tablet-landscape} {
+    margin-bottom: 20px !important;
+  }
+  @media #{$desk} {
+    margin-bottom: 50px !important;
+  }
+}
+@mixin padding() {
+  padding: 15px 0 15px 0;
+  @media #{$mobile-landscape} {
+    padding: 15px 0 15px 0;
+  }
+  @media #{$tablet-portrait} {
+    padding: 15px 0 15px 0;
+  }
+  @media #{$tablet-landscape} {
+    padding: 30px 0 30px 0;
+  }
+  @media #{$desk} {
+    padding: 50px 0 50px 0;
+  }
+}
+@mixin h2() {
+  padding-bottom: 2px; //Needed for this font.
+  color: #000 !important;
+  font-size: 3.0rem !important;
+  margin-top: 0 !important;
+  font-weight: 900;
+  margin-bottom: 13px !important;;
+  @media #{$mobile-landscape} {
+    font-size: 3.0rem !important;
+    margin-bottom: 13px !important;;
+  }
+  @media #{$tablet-portrait} {
+    font-size: 4.0rem !important;
+    margin-bottom: 13px !important;;
+  }
+  @media #{$tablet-landscape} {
+    font-size: 5.0rem !important;
+    margin-bottom: 13px !important;
+  }
+  @media #{$desk} {
+    font-size: 5.0rem !important;
+    margin-bottom: 18px !important;
+  }
+}

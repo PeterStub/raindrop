@@ -10,17 +10,17 @@ regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
   header: 'Top Bar'
+  front_page_wide1: Frontpage wide1
+  front_page_wide2: Frontpage wide2
+  front_page_wide3: Frontpage wide3
+  front_page_wide4: Frontpage wide4
+  front_page_wide5: Frontpage wide5
   highlighted: 'Highlighted'
   help: 'Help'
   content: 'Content'
   sidebar_first: 'Primary'
   sidebar_second: 'Secondary'
   footer: 'Footer'
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
-  front_page_wide1: frontpage_wide1
-  front_page_wide2: frontpage_wide2
-  front_page_wide3: frontpage_wide3
 
 libraries:
   - 'raindrop/global-styling'

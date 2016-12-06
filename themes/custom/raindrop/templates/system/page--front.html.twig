@@ -57,16 +57,15 @@
  */
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
-
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
   {% block navbar %}
     {%
-      set navbar_classes = [
-        'navbar',
-        theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
-        theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
-      ]
+    set navbar_classes = [
+    'navbar',
+    theme.settings.navbar_inverse ? 'navbar-inverse' : 'navbar-default',
+    theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
+    ]
     %}
     <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
       <div class="navbar-header">
@@ -92,73 +91,167 @@
   {% endblock %}
 {% endif %}
 
+{# Header #}
+{% if page.header %}
+  {% block header %}
+    <div class="col-sm-12" role="heading">
+      {{ page.header }}
+    </div>
+  {% endblock %}
+{% endif %}
+
+{# region hero #}
+<div class="hero">
+  <div class="hero-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="hero-content">
+            {#{{ page.hero }}#}
+            <h1>Drupal freelancers</h1>
+            <h2>- ready to work...</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{# block front_page_wide1 #}
+{% if page.front_page_wide1 %}
+  {% block front_page_wide1 %}
+    <div class="wide1">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="wide-content1">
+              {{ page.front_page_wide1 }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endif %}
+
+{# block front_page_wide2 #}
+{% if page.front_page_wide2 %}
+  {% block front_page_wide2 %}
+    <div class="wide2">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="wide-content2">
+              {{ page.front_page_wide2 }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endif %}
+
+{# block front_page_wide3 #}
+{% if page.front_page_wide3 %}
+  {% block front_page_wide3 %}
+    <div class="wide3">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="wide-content3">
+              {{ page.front_page_wide3 }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endif %}
+
+{# block front_page_wide4 #}
+{% if page.front_page_wide4 %}
+  {% block front_page_wide4 %}
+    <div class="wide4">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="wide-content4">
+              {{ page.front_page_wide4 }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endif %}
+
+{# block front_page_wide5 #}
+{% if page.front_page_wide5 %}
+  {% block front_page_wide5 %}
+    <div class="wide5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="wide-content3">
+              {{ page.front_page_wide5 }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endif %}
+
 {# Main #}
 {% block main %}
-
-  {# Sidewide1 #}
-  {% if page.front_page_wide1 %}
-    {% block front_page_wide1 %}
-      <div class="front_page_wide1">
-        <div role="main" class="main-container {{ container }} js-quickedit-main-content">
-          {{ page.front_page_wide1 }}
-        </div>
-      </div>
-    {% endblock %}
-  {% endif %}
-
-  {# Sidewide2 #}
-  {% if page.front_page_wide2 %}
-    {% block front_page_wide2 %}
-      <div class="front_page_wide2">
-        <div role="main" class="main-container {{ container }} js-quickedit-main-content">
-          {{ page.front_page_wide2 }}
-        </div>
-      </div>
-    {% endblock %}
-  {% endif %}
-
-  {# Sidewide3 #}
-  {% if page.front_page_wide3 %}
-    {% block front_page_wide3 %}
-      <div class="front_page_wide3">
-        <div role="main" class="main-container {{ container }} js-quickedit-main-content">
-          {{ page.front_page_wide3 }}
-        </div>
-      </div>
-    {% endblock %}
-  {% endif %}
-
-
-
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
     <div class="row">
-
-      {# Header #}
-      {% if page.header %}
-        {% block header %}
-          <div class="col-sm-12" role="heading">
-            {{ page.header }}
-          </div>
+      {# Sidebar First #}
+      {% if page.sidebar_first %}
+        {% block sidebar_first %}
+          <aside class="col-sm-3" role="complementary">
+            {{ page.sidebar_first }}
+          </aside>
         {% endblock %}
       {% endif %}
 
-
-
       {# Content #}
       {%
-        set content_classes = [
-          page.sidebar_first and page.sidebar_second ? 'col-sm-6',
-          page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
-          page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
-          page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
-        ]
+      set content_classes = [
+      page.sidebar_first and page.sidebar_second ? 'col-sm-6',
+      page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
+      page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
+      page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12'
+      ]
       %}
-
       <section{{ content_attributes.addClass(content_classes) }}>
+
+        {# Highlighted #}
+        {% if page.highlighted %}
+          {% block highlighted %}
+            <div class="highlighted">{{ page.highlighted }}</div>
+          {% endblock %}
+        {% endif %}
+
+        {# Breadcrumbs #}
+        {% if breadcrumb %}
+          {% block breadcrumb %}
+            {{ breadcrumb }}
+          {% endblock %}
+        {% endif %}
+
         {# Action Links #}
         {% if action_links %}
           {% block action_links %}
             <ul class="action-links">{{ action_links }}</ul>
+          {% endblock %}
+        {% endif %}
+
+        {# Help #}
+        {% if page.help %}
+          {% block help %}
+            {{ page.help }}
           {% endblock %}
         {% endif %}
 
@@ -169,7 +262,14 @@
         {% endblock %}
       </section>
 
-
+      {# Sidebar Second #}
+      {% if page.sidebar_second %}
+        {% block sidebar_second %}
+          <aside class="col-sm-3" role="complementary">
+            {{ page.sidebar_second }}
+          </aside>
+        {% endblock %}
+      {% endif %}
     </div>
   </div>
 {% endblock %}

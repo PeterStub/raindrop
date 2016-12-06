@@ -3,6 +3,9 @@ global-styling:
     theme:
       css/style.css: {}
       fonts/font-awesome/css/font-awesome.min.css: {}
+#      fonts.googleapis.com/css?family=Raleway {type:external}
+#      'https://fonts.googleapis.com/css?family=Raleway:900': { type: external }
+      'https://fonts.googleapis.com/css?family=Raleway:300,400': { type: external }
 
 bootstrap-scripts:
   js:
