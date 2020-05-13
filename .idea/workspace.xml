@@ -26,9 +26,6 @@
   <component name="DrupalConfiguration" enabled="true" version="8">
     <drupalPath>$PROJECT_DIR$</drupalPath>
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="raindrop" />
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>mixi</find>
@@ -180,7 +177,7 @@
       <workItem from="1525174865662" duration="478000" />
       <workItem from="1525253178793" duration="77000" />
       <workItem from="1543995932351" duration="726000" />
-      <workItem from="1589398107006" duration="246000" />
+      <workItem from="1589398107006" duration="425000" />
     </task>
     <servers />
   </component>
